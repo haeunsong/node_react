@@ -25,7 +25,11 @@ const LoginPage = (props) => {
       email:Email,
       password:Password
     }
-// loginUser라는 액션
+
+// loginUser라는 액션을 dispatch한다.(보낸다)
+// 리덕스를 사용하지 않으면 원래 여기서
+// axios.post('/api/login',body) 이런식으로 써준다.
+
     dispatch(loginUser(body))
     .then(resp=>{
       if(resp.payload.loginSuccess){
