@@ -89,7 +89,7 @@ userSchema.methods.generateToken = function(cb) {
   })
 }
 
-userSchema.statics.findByToken = (token,cb) => {
+userSchema.statics.findByToken = function (token,cb){
   var user = this;
   // 토큰을 decode한다.(복호화)
   // 복호화하면 유저 아이디가 나온다.
